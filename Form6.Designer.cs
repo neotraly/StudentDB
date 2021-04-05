@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             System.Windows.Forms.Label код_студентаLabel;
             System.Windows.Forms.Label дата_экзамена_1Label;
             System.Windows.Forms.Label код_предмета_1Label;
@@ -41,23 +40,24 @@
             System.Windows.Forms.Label код_предмета_3Label;
             System.Windows.Forms.Label оценка_3Label;
             System.Windows.Forms.Label средний_баллLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             this.label1 = new System.Windows.Forms.Label();
             this.studentsDataSet = new StudendDB.StudentsDataSet();
             this.оценкиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.оценкиTableAdapter = new StudendDB.StudentsDataSetTableAdapters.ОценкиTableAdapter();
             this.tableAdapterManager = new StudendDB.StudentsDataSetTableAdapters.TableAdapterManager();
             this.оценкиBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.оценкиBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.код_студентаTextBox = new System.Windows.Forms.TextBox();
             this.дата_экзамена_1DateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -70,6 +70,8 @@
             this.код_предмета_3TextBox = new System.Windows.Forms.TextBox();
             this.оценка_3TextBox = new System.Windows.Forms.TextBox();
             this.средний_баллTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             код_студентаLabel = new System.Windows.Forms.Label();
             дата_экзамена_1Label = new System.Windows.Forms.Label();
             код_предмета_1Label = new System.Windows.Forms.Label();
@@ -86,6 +88,105 @@
             ((System.ComponentModel.ISupportInitialize)(this.оценкиBindingNavigator)).BeginInit();
             this.оценкиBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // код_студентаLabel
+            // 
+            код_студентаLabel.AutoSize = true;
+            код_студентаLabel.Location = new System.Drawing.Point(68, 104);
+            код_студентаLabel.Name = "код_студентаLabel";
+            код_студентаLabel.Size = new System.Drawing.Size(77, 13);
+            код_студентаLabel.TabIndex = 2;
+            код_студентаLabel.Text = "Код студента:";
+            // 
+            // дата_экзамена_1Label
+            // 
+            дата_экзамена_1Label.AutoSize = true;
+            дата_экзамена_1Label.Location = new System.Drawing.Point(47, 131);
+            дата_экзамена_1Label.Name = "дата_экзамена_1Label";
+            дата_экзамена_1Label.Size = new System.Drawing.Size(98, 13);
+            дата_экзамена_1Label.TabIndex = 4;
+            дата_экзамена_1Label.Text = "Дата экзамена 1:";
+            // 
+            // код_предмета_1Label
+            // 
+            код_предмета_1Label.AutoSize = true;
+            код_предмета_1Label.Location = new System.Drawing.Point(55, 156);
+            код_предмета_1Label.Name = "код_предмета_1Label";
+            код_предмета_1Label.Size = new System.Drawing.Size(90, 13);
+            код_предмета_1Label.TabIndex = 6;
+            код_предмета_1Label.Text = "Код предмета 1:";
+            // 
+            // оценка_1Label
+            // 
+            оценка_1Label.AutoSize = true;
+            оценка_1Label.Location = new System.Drawing.Point(88, 182);
+            оценка_1Label.Name = "оценка_1Label";
+            оценка_1Label.Size = new System.Drawing.Size(57, 13);
+            оценка_1Label.TabIndex = 8;
+            оценка_1Label.Text = "Оценка 1:";
+            // 
+            // дата_экзамена_2Label
+            // 
+            дата_экзамена_2Label.AutoSize = true;
+            дата_экзамена_2Label.Location = new System.Drawing.Point(47, 209);
+            дата_экзамена_2Label.Name = "дата_экзамена_2Label";
+            дата_экзамена_2Label.Size = new System.Drawing.Size(98, 13);
+            дата_экзамена_2Label.TabIndex = 10;
+            дата_экзамена_2Label.Text = "Дата экзамена 2:";
+            // 
+            // код_предмета_2Label
+            // 
+            код_предмета_2Label.AutoSize = true;
+            код_предмета_2Label.Location = new System.Drawing.Point(55, 234);
+            код_предмета_2Label.Name = "код_предмета_2Label";
+            код_предмета_2Label.Size = new System.Drawing.Size(90, 13);
+            код_предмета_2Label.TabIndex = 12;
+            код_предмета_2Label.Text = "Код предмета 2:";
+            // 
+            // оценка_2Label
+            // 
+            оценка_2Label.AutoSize = true;
+            оценка_2Label.Location = new System.Drawing.Point(88, 260);
+            оценка_2Label.Name = "оценка_2Label";
+            оценка_2Label.Size = new System.Drawing.Size(57, 13);
+            оценка_2Label.TabIndex = 14;
+            оценка_2Label.Text = "Оценка 2:";
+            // 
+            // дата_экзамена_3Label
+            // 
+            дата_экзамена_3Label.AutoSize = true;
+            дата_экзамена_3Label.Location = new System.Drawing.Point(47, 287);
+            дата_экзамена_3Label.Name = "дата_экзамена_3Label";
+            дата_экзамена_3Label.Size = new System.Drawing.Size(98, 13);
+            дата_экзамена_3Label.TabIndex = 16;
+            дата_экзамена_3Label.Text = "Дата экзамена 3:";
+            // 
+            // код_предмета_3Label
+            // 
+            код_предмета_3Label.AutoSize = true;
+            код_предмета_3Label.Location = new System.Drawing.Point(55, 312);
+            код_предмета_3Label.Name = "код_предмета_3Label";
+            код_предмета_3Label.Size = new System.Drawing.Size(90, 13);
+            код_предмета_3Label.TabIndex = 18;
+            код_предмета_3Label.Text = "Код предмета 3:";
+            // 
+            // оценка_3Label
+            // 
+            оценка_3Label.AutoSize = true;
+            оценка_3Label.Location = new System.Drawing.Point(88, 338);
+            оценка_3Label.Name = "оценка_3Label";
+            оценка_3Label.Size = new System.Drawing.Size(57, 13);
+            оценка_3Label.TabIndex = 20;
+            оценка_3Label.Text = "Оценка 3:";
+            // 
+            // средний_баллLabel
+            // 
+            средний_баллLabel.AutoSize = true;
+            средний_баллLabel.Location = new System.Drawing.Point(65, 364);
+            средний_баллLabel.Name = "средний_баллLabel";
+            средний_баллLabel.Size = new System.Drawing.Size(80, 13);
+            средний_баллLabel.TabIndex = 22;
+            средний_баллLabel.Text = "Средний балл:";
             // 
             // label1
             // 
@@ -150,6 +251,31 @@
             this.оценкиBindingNavigator.TabIndex = 1;
             this.оценкиBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -177,22 +303,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -200,7 +320,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -209,49 +329,22 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // оценкиBindingNavigatorSaveItem
             // 
             this.оценкиBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.оценкиBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("оценкиBindingNavigatorSaveItem.Image")));
             this.оценкиBindingNavigatorSaveItem.Name = "оценкиBindingNavigatorSaveItem";
-            this.оценкиBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.оценкиBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.оценкиBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.оценкиBindingNavigatorSaveItem.Click += new System.EventHandler(this.оценкиBindingNavigatorSaveItem_Click);
-            // 
-            // код_студентаLabel
-            // 
-            код_студентаLabel.AutoSize = true;
-            код_студентаLabel.Location = new System.Drawing.Point(68, 104);
-            код_студентаLabel.Name = "код_студентаLabel";
-            код_студентаLabel.Size = new System.Drawing.Size(77, 13);
-            код_студентаLabel.TabIndex = 2;
-            код_студентаLabel.Text = "Код студента:";
             // 
             // код_студентаTextBox
             // 
@@ -261,15 +354,6 @@
             this.код_студентаTextBox.Size = new System.Drawing.Size(100, 20);
             this.код_студентаTextBox.TabIndex = 3;
             // 
-            // дата_экзамена_1Label
-            // 
-            дата_экзамена_1Label.AutoSize = true;
-            дата_экзамена_1Label.Location = new System.Drawing.Point(47, 131);
-            дата_экзамена_1Label.Name = "дата_экзамена_1Label";
-            дата_экзамена_1Label.Size = new System.Drawing.Size(98, 13);
-            дата_экзамена_1Label.TabIndex = 4;
-            дата_экзамена_1Label.Text = "Дата экзамена 1:";
-            // 
             // дата_экзамена_1DateTimePicker
             // 
             this.дата_экзамена_1DateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.оценкиBindingSource, "Дата_экзамена_1", true));
@@ -277,15 +361,6 @@
             this.дата_экзамена_1DateTimePicker.Name = "дата_экзамена_1DateTimePicker";
             this.дата_экзамена_1DateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.дата_экзамена_1DateTimePicker.TabIndex = 5;
-            // 
-            // код_предмета_1Label
-            // 
-            код_предмета_1Label.AutoSize = true;
-            код_предмета_1Label.Location = new System.Drawing.Point(55, 156);
-            код_предмета_1Label.Name = "код_предмета_1Label";
-            код_предмета_1Label.Size = new System.Drawing.Size(90, 13);
-            код_предмета_1Label.TabIndex = 6;
-            код_предмета_1Label.Text = "Код предмета 1:";
             // 
             // код_предмета_1TextBox
             // 
@@ -295,15 +370,6 @@
             this.код_предмета_1TextBox.Size = new System.Drawing.Size(100, 20);
             this.код_предмета_1TextBox.TabIndex = 7;
             // 
-            // оценка_1Label
-            // 
-            оценка_1Label.AutoSize = true;
-            оценка_1Label.Location = new System.Drawing.Point(88, 182);
-            оценка_1Label.Name = "оценка_1Label";
-            оценка_1Label.Size = new System.Drawing.Size(57, 13);
-            оценка_1Label.TabIndex = 8;
-            оценка_1Label.Text = "Оценка 1:";
-            // 
             // оценка_1TextBox
             // 
             this.оценка_1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.оценкиBindingSource, "Оценка_1", true));
@@ -311,15 +377,6 @@
             this.оценка_1TextBox.Name = "оценка_1TextBox";
             this.оценка_1TextBox.Size = new System.Drawing.Size(100, 20);
             this.оценка_1TextBox.TabIndex = 9;
-            // 
-            // дата_экзамена_2Label
-            // 
-            дата_экзамена_2Label.AutoSize = true;
-            дата_экзамена_2Label.Location = new System.Drawing.Point(47, 209);
-            дата_экзамена_2Label.Name = "дата_экзамена_2Label";
-            дата_экзамена_2Label.Size = new System.Drawing.Size(98, 13);
-            дата_экзамена_2Label.TabIndex = 10;
-            дата_экзамена_2Label.Text = "Дата экзамена 2:";
             // 
             // дата_экзамена_2DateTimePicker
             // 
@@ -329,15 +386,6 @@
             this.дата_экзамена_2DateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.дата_экзамена_2DateTimePicker.TabIndex = 11;
             // 
-            // код_предмета_2Label
-            // 
-            код_предмета_2Label.AutoSize = true;
-            код_предмета_2Label.Location = new System.Drawing.Point(55, 234);
-            код_предмета_2Label.Name = "код_предмета_2Label";
-            код_предмета_2Label.Size = new System.Drawing.Size(90, 13);
-            код_предмета_2Label.TabIndex = 12;
-            код_предмета_2Label.Text = "Код предмета 2:";
-            // 
             // код_предмета_2TextBox
             // 
             this.код_предмета_2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.оценкиBindingSource, "Код_предмета_2", true));
@@ -345,15 +393,6 @@
             this.код_предмета_2TextBox.Name = "код_предмета_2TextBox";
             this.код_предмета_2TextBox.Size = new System.Drawing.Size(100, 20);
             this.код_предмета_2TextBox.TabIndex = 13;
-            // 
-            // оценка_2Label
-            // 
-            оценка_2Label.AutoSize = true;
-            оценка_2Label.Location = new System.Drawing.Point(88, 260);
-            оценка_2Label.Name = "оценка_2Label";
-            оценка_2Label.Size = new System.Drawing.Size(57, 13);
-            оценка_2Label.TabIndex = 14;
-            оценка_2Label.Text = "Оценка 2:";
             // 
             // оценка_2TextBox
             // 
@@ -363,15 +402,6 @@
             this.оценка_2TextBox.Size = new System.Drawing.Size(100, 20);
             this.оценка_2TextBox.TabIndex = 15;
             // 
-            // дата_экзамена_3Label
-            // 
-            дата_экзамена_3Label.AutoSize = true;
-            дата_экзамена_3Label.Location = new System.Drawing.Point(47, 287);
-            дата_экзамена_3Label.Name = "дата_экзамена_3Label";
-            дата_экзамена_3Label.Size = new System.Drawing.Size(98, 13);
-            дата_экзамена_3Label.TabIndex = 16;
-            дата_экзамена_3Label.Text = "Дата экзамена 3:";
-            // 
             // дата_экзамена_3DateTimePicker
             // 
             this.дата_экзамена_3DateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.оценкиBindingSource, "Дата_экзамена_3", true));
@@ -379,15 +409,6 @@
             this.дата_экзамена_3DateTimePicker.Name = "дата_экзамена_3DateTimePicker";
             this.дата_экзамена_3DateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.дата_экзамена_3DateTimePicker.TabIndex = 17;
-            // 
-            // код_предмета_3Label
-            // 
-            код_предмета_3Label.AutoSize = true;
-            код_предмета_3Label.Location = new System.Drawing.Point(55, 312);
-            код_предмета_3Label.Name = "код_предмета_3Label";
-            код_предмета_3Label.Size = new System.Drawing.Size(90, 13);
-            код_предмета_3Label.TabIndex = 18;
-            код_предмета_3Label.Text = "Код предмета 3:";
             // 
             // код_предмета_3TextBox
             // 
@@ -397,15 +418,6 @@
             this.код_предмета_3TextBox.Size = new System.Drawing.Size(100, 20);
             this.код_предмета_3TextBox.TabIndex = 19;
             // 
-            // оценка_3Label
-            // 
-            оценка_3Label.AutoSize = true;
-            оценка_3Label.Location = new System.Drawing.Point(88, 338);
-            оценка_3Label.Name = "оценка_3Label";
-            оценка_3Label.Size = new System.Drawing.Size(57, 13);
-            оценка_3Label.TabIndex = 20;
-            оценка_3Label.Text = "Оценка 3:";
-            // 
             // оценка_3TextBox
             // 
             this.оценка_3TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.оценкиBindingSource, "Оценка_3", true));
@@ -413,15 +425,6 @@
             this.оценка_3TextBox.Name = "оценка_3TextBox";
             this.оценка_3TextBox.Size = new System.Drawing.Size(100, 20);
             this.оценка_3TextBox.TabIndex = 21;
-            // 
-            // средний_баллLabel
-            // 
-            средний_баллLabel.AutoSize = true;
-            средний_баллLabel.Location = new System.Drawing.Point(65, 364);
-            средний_баллLabel.Name = "средний_баллLabel";
-            средний_баллLabel.Size = new System.Drawing.Size(80, 13);
-            средний_баллLabel.TabIndex = 22;
-            средний_баллLabel.Text = "Средний балл:";
             // 
             // средний_баллTextBox
             // 
@@ -431,12 +434,33 @@
             this.средний_баллTextBox.Size = new System.Drawing.Size(100, 20);
             this.средний_баллTextBox.TabIndex = 23;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(276, 358);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Вычислить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(376, 416);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(средний_баллLabel);
             this.Controls.Add(this.средний_баллTextBox);
             this.Controls.Add(оценка_3Label);
@@ -508,5 +532,7 @@
         private System.Windows.Forms.TextBox код_предмета_3TextBox;
         private System.Windows.Forms.TextBox оценка_3TextBox;
         private System.Windows.Forms.TextBox средний_баллTextBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -105,5 +105,10 @@ namespace StudendDB
         {
             this.Close();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new Form2().Show();
+        }
     }
 }

@@ -39,15 +39,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.студентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentsDataSet = new StudendDB.StudentsDataSet();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.студентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentsDataSet = new StudendDB.StudentsDataSet();
-            this.студентыTableAdapter = new StudendDB.StudentsDataSetTableAdapters.СтудентыTableAdapter();
             this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.полDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датарожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,10 +59,12 @@
             this.группаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.курсDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.очнаяформаобученияDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.студентыTableAdapter = new StudendDB.StudentsDataSetTableAdapters.СтудентыTableAdapter();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.студентыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataSet)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -168,6 +169,16 @@
             this.comboBox1.Size = new System.Drawing.Size(425, 21);
             this.comboBox1.TabIndex = 9;
             // 
+            // студентыBindingSource
+            // 
+            this.студентыBindingSource.DataMember = "Студенты";
+            this.студентыBindingSource.DataSource = this.studentsDataSet;
+            // 
+            // studentsDataSet
+            // 
+            this.studentsDataSet.DataSetName = "StudentsDataSet";
+            this.studentsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(538, 415);
@@ -256,20 +267,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(951, 297);
             this.dataGridView1.TabIndex = 12;
             // 
-            // студентыBindingSource
-            // 
-            this.студентыBindingSource.DataMember = "Студенты";
-            this.студентыBindingSource.DataSource = this.studentsDataSet;
-            // 
-            // studentsDataSet
-            // 
-            this.studentsDataSet.DataSetName = "StudentsDataSet";
-            this.studentsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // студентыTableAdapter
-            // 
-            this.студентыTableAdapter.ClearBeforeFill = true;
-            // 
             // фИОDataGridViewTextBoxColumn
             // 
             this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
@@ -342,11 +339,26 @@
             this.очнаяформаобученияDataGridViewCheckBoxColumn.HeaderText = "Очная_форма_обучения";
             this.очнаяформаобученияDataGridViewCheckBoxColumn.Name = "очнаяформаобученияDataGridViewCheckBoxColumn";
             // 
+            // студентыTableAdapter
+            // 
+            this.студентыTableAdapter.ClearBeforeFill = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(12, 408);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Главная";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 450);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
@@ -360,13 +372,13 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Форма";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.студентыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.студентыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,6 +417,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn группаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn курсDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn очнаяформаобученияDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button button6;
     }
 }
 

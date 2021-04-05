@@ -31,5 +31,11 @@ namespace StudendDB
             this.оценкиTableAdapter.Fill(this.studentsDataSet.Оценки);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            средний_баллTextBox.Text = (Convert.ToInt32(оценка_1TextBox.Text) + Convert.ToInt32(оценка_2TextBox.Text) + Convert.ToInt32(оценка_3TextBox.Text)).ToString();
+        }
     }
 }
