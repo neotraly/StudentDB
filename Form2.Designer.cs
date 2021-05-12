@@ -101,6 +101,7 @@
             this.MinimizeBox = false;
             this.Name = "Form2";
             this.Text = "База данных";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
         }

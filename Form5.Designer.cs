@@ -39,10 +39,10 @@
             System.Windows.Forms.Label группаLabel;
             System.Windows.Forms.Label код_специальностиLabel;
             System.Windows.Forms.Label очная_форма_обученияLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             System.Windows.Forms.Label курсLabel1;
             System.Windows.Forms.Label полLabel1;
             System.Windows.Forms.Label родителиLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.label1 = new System.Windows.Forms.Label();
             this.studentsDataSet = new StudendDB.StudentsDataSet();
             this.студентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -68,13 +68,13 @@
             this.группаTextBox = new System.Windows.Forms.TextBox();
             this.очная_форма_обученияCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
@@ -84,6 +84,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.специальностиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.специальностиTableAdapter = new StudendDB.StudentsDataSetTableAdapters.СпециальностиTableAdapter();
+            this.button8 = new System.Windows.Forms.Button();
             фИОLabel = new System.Windows.Forms.Label();
             дата_рожденияLabel = new System.Windows.Forms.Label();
             адресLabel = new System.Windows.Forms.Label();
@@ -195,6 +196,33 @@
             очная_форма_обученияLabel.Size = new System.Drawing.Size(127, 13);
             очная_форма_обученияLabel.TabIndex = 26;
             очная_форма_обученияLabel.Text = "Очная форма обучения:";
+            // 
+            // курсLabel1
+            // 
+            курсLabel1.AutoSize = true;
+            курсLabel1.Location = new System.Drawing.Point(117, 340);
+            курсLabel1.Name = "курсLabel1";
+            курсLabel1.Size = new System.Drawing.Size(34, 13);
+            курсLabel1.TabIndex = 31;
+            курсLabel1.Text = "Курс:";
+            // 
+            // полLabel1
+            // 
+            полLabel1.AutoSize = true;
+            полLabel1.Location = new System.Drawing.Point(121, 109);
+            полLabel1.Name = "полLabel1";
+            полLabel1.Size = new System.Drawing.Size(30, 13);
+            полLabel1.TabIndex = 32;
+            полLabel1.Text = "Пол:";
+            // 
+            // родителиLabel1
+            // 
+            родителиLabel1.AutoSize = true;
+            родителиLabel1.Location = new System.Drawing.Point(93, 161);
+            родителиLabel1.Name = "родителиLabel1";
+            родителиLabel1.Size = new System.Drawing.Size(58, 13);
+            родителиLabel1.TabIndex = 33;
+            родителиLabel1.Text = "Родители:";
             // 
             // label1
             // 
@@ -405,6 +433,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button5);
@@ -414,59 +443,19 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(392, 109);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(88, 226);
+            this.groupBox1.Size = new System.Drawing.Size(88, 273);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
-            // button1
+            // button7
             // 
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Первая";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(6, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Предыдущая";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Следующая";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 106);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Последняя";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(6, 135);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Добавить";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button7.Location = new System.Drawing.Point(6, 193);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Сохранить";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -478,15 +467,55 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // button5
             // 
-            this.button7.Location = new System.Drawing.Point(6, 193);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Сохранить";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button5.Location = new System.Drawing.Point(6, 135);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Добавить";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 106);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Последняя";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Следующая";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(6, 48);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Предыдущая";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Первая";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // maskedTextBox1
             // 
@@ -516,15 +545,6 @@
             this.maskedTextBox3.TabIndex = 31;
             this.maskedTextBox3.ValidatingType = typeof(int);
             // 
-            // курсLabel1
-            // 
-            курсLabel1.AutoSize = true;
-            курсLabel1.Location = new System.Drawing.Point(117, 340);
-            курсLabel1.Name = "курсLabel1";
-            курсLabel1.Size = new System.Drawing.Size(34, 13);
-            курсLabel1.TabIndex = 31;
-            курсLabel1.Text = "Курс:";
-            // 
             // курсNumericUpDown
             // 
             this.курсNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.студентыBindingSource, "Курс", true));
@@ -532,15 +552,6 @@
             this.курсNumericUpDown.Name = "курсNumericUpDown";
             this.курсNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.курсNumericUpDown.TabIndex = 32;
-            // 
-            // полLabel1
-            // 
-            полLabel1.AutoSize = true;
-            полLabel1.Location = new System.Drawing.Point(121, 109);
-            полLabel1.Name = "полLabel1";
-            полLabel1.Size = new System.Drawing.Size(30, 13);
-            полLabel1.TabIndex = 32;
-            полLabel1.Text = "Пол:";
             // 
             // полComboBox
             // 
@@ -554,15 +565,6 @@
             this.полComboBox.Size = new System.Drawing.Size(121, 21);
             this.полComboBox.TabIndex = 33;
             this.полComboBox.SelectedIndexChanged += new System.EventHandler(this.полComboBox_SelectedIndexChanged);
-            // 
-            // родителиLabel1
-            // 
-            родителиLabel1.AutoSize = true;
-            родителиLabel1.Location = new System.Drawing.Point(93, 161);
-            родителиLabel1.Name = "родителиLabel1";
-            родителиLabel1.Size = new System.Drawing.Size(58, 13);
-            родителиLabel1.TabIndex = 33;
-            родителиLabel1.Text = "Родители:";
             // 
             // родителиComboBox
             // 
@@ -598,6 +600,16 @@
             // специальностиTableAdapter
             // 
             this.специальностиTableAdapter.ClearBeforeFill = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(7, 244);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Отчет";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form5
             // 
@@ -694,5 +706,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource специальностиBindingSource;
         private StudentsDataSetTableAdapters.СпециальностиTableAdapter специальностиTableAdapter;
+        private System.Windows.Forms.Button button8;
     }
 }

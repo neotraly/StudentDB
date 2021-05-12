@@ -36,5 +36,11 @@ namespace StudendDB
         {
             new Form6().Show();
         }
+
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

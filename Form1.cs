@@ -32,7 +32,16 @@ namespace StudendDB
 
         private void button3_Click(object sender, EventArgs e)
         {
-            студентыBindingSource.Filter = "";
+            студентыBindingSource.RemoveFilter(); 
+           
+            for (int i = 0; i < dataGridView1.ColumnCount - 1; i++)
+            {
+                for (int j = 0; j < dataGridView1.RowCount - 1; j++)
+                {
+                    dataGridView1[i, j].Style.ForeColor = Color.Black;
+                    dataGridView1[i, j].Style.BackColor = Color.White;
+                }
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
