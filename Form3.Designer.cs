@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             System.Windows.Forms.Label наименование_специальностиLabel;
             System.Windows.Forms.Label описание_специальностиLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.label1 = new System.Windows.Forms.Label();
             this.studentsDataSet = new StudendDB.StudentsDataSet();
             this.специальностиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.специальностиTableAdapter = new StudendDB.StudentsDataSetTableAdapters.СпециальностиTableAdapter();
             this.tableAdapterManager = new StudendDB.StudentsDataSetTableAdapters.TableAdapterManager();
             this.специальностиBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.специальностиBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.наименование_специальностиTextBox = new System.Windows.Forms.TextBox();
             this.описание_специальностиTextBox = new System.Windows.Forms.TextBox();
@@ -60,11 +60,29 @@
             this.специальностиBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
+            // наименование_специальностиLabel
+            // 
+            наименование_специальностиLabel.AutoSize = true;
+            наименование_специальностиLabel.Location = new System.Drawing.Point(13, 103);
+            наименование_специальностиLabel.Name = "наименование_специальностиLabel";
+            наименование_специальностиLabel.Size = new System.Drawing.Size(166, 13);
+            наименование_специальностиLabel.TabIndex = 2;
+            наименование_специальностиLabel.Text = "Наименование специальности:";
+            // 
+            // описание_специальностиLabel
+            // 
+            описание_специальностиLabel.AutoSize = true;
+            описание_специальностиLabel.Location = new System.Drawing.Point(39, 143);
+            описание_специальностиLabel.Name = "описание_специальностиLabel";
+            описание_специальностиLabel.Size = new System.Drawing.Size(140, 13);
+            описание_специальностиLabel.TabIndex = 4;
+            описание_специальностиLabel.Text = "Описание специальности:";
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(12, 46);
+            this.label1.Location = new System.Drawing.Point(68, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(309, 23);
             this.label1.TabIndex = 0;
@@ -120,9 +138,34 @@
             this.специальностиBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.специальностиBindingNavigator.Name = "специальностиBindingNavigator";
             this.специальностиBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.специальностиBindingNavigator.Size = new System.Drawing.Size(339, 25);
+            this.специальностиBindingNavigator.Size = new System.Drawing.Size(421, 25);
             this.специальностиBindingNavigator.TabIndex = 1;
             this.специальностиBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -151,22 +194,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -174,7 +211,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -183,80 +220,44 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // специальностиBindingNavigatorSaveItem
             // 
             this.специальностиBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.специальностиBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("специальностиBindingNavigatorSaveItem.Image")));
             this.специальностиBindingNavigatorSaveItem.Name = "специальностиBindingNavigatorSaveItem";
-            this.специальностиBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.специальностиBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.специальностиBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.специальностиBindingNavigatorSaveItem.Click += new System.EventHandler(this.специальностиBindingNavigatorSaveItem_Click);
-            // 
-            // наименование_специальностиLabel
-            // 
-            наименование_специальностиLabel.AutoSize = true;
-            наименование_специальностиLabel.Location = new System.Drawing.Point(13, 103);
-            наименование_специальностиLabel.Name = "наименование_специальностиLabel";
-            наименование_специальностиLabel.Size = new System.Drawing.Size(166, 13);
-            наименование_специальностиLabel.TabIndex = 2;
-            наименование_специальностиLabel.Text = "Наименование специальности:";
             // 
             // наименование_специальностиTextBox
             // 
             this.наименование_специальностиTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.специальностиBindingSource, "Наименование_специальности", true));
             this.наименование_специальностиTextBox.Location = new System.Drawing.Point(185, 100);
             this.наименование_специальностиTextBox.Name = "наименование_специальностиTextBox";
-            this.наименование_специальностиTextBox.Size = new System.Drawing.Size(100, 20);
+            this.наименование_специальностиTextBox.Size = new System.Drawing.Size(192, 20);
             this.наименование_специальностиTextBox.TabIndex = 3;
-            // 
-            // описание_специальностиLabel
-            // 
-            описание_специальностиLabel.AutoSize = true;
-            описание_специальностиLabel.Location = new System.Drawing.Point(39, 143);
-            описание_специальностиLabel.Name = "описание_специальностиLabel";
-            описание_специальностиLabel.Size = new System.Drawing.Size(140, 13);
-            описание_специальностиLabel.TabIndex = 4;
-            описание_специальностиLabel.Text = "Описание специальности:";
             // 
             // описание_специальностиTextBox
             // 
             this.описание_специальностиTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.специальностиBindingSource, "Описание_специальности", true));
             this.описание_специальностиTextBox.Location = new System.Drawing.Point(185, 140);
             this.описание_специальностиTextBox.Name = "описание_специальностиTextBox";
-            this.описание_специальностиTextBox.Size = new System.Drawing.Size(100, 20);
+            this.описание_специальностиTextBox.Size = new System.Drawing.Size(192, 20);
             this.описание_специальностиTextBox.TabIndex = 5;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 259);
+            this.ClientSize = new System.Drawing.Size(421, 193);
             this.Controls.Add(описание_специальностиLabel);
             this.Controls.Add(this.описание_специальностиTextBox);
             this.Controls.Add(наименование_специальностиLabel);
