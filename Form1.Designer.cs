@@ -46,7 +46,10 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.студентыTableAdapter = new StudendDB.StudentsDataSetTableAdapters.СтудентыTableAdapter();
+            this.button6 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.кодстудентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.полDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.датарожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +61,8 @@
             this.датапоступленияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.группаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.курсDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодспециальностиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.очнаяформаобученияDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.студентыTableAdapter = new StudendDB.StudentsDataSetTableAdapters.СтудентыTableAdapter();
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.студентыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentsDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -108,7 +110,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LightCoral;
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(97, 258);
@@ -244,11 +246,26 @@
             this.radioButton1.Text = "Сортировка по возврастанию";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // студентыTableAdapter
+            // 
+            this.студентыTableAdapter.ClearBeforeFill = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(12, 408);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Главная";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.кодстудентаDataGridViewTextBoxColumn,
             this.фИОDataGridViewTextBoxColumn,
             this.полDataGridViewTextBoxColumn,
             this.датарожденияDataGridViewTextBoxColumn,
@@ -260,12 +277,20 @@
             this.датапоступленияDataGridViewTextBoxColumn,
             this.группаDataGridViewTextBoxColumn,
             this.курсDataGridViewTextBoxColumn,
+            this.кодспециальностиDataGridViewTextBoxColumn,
             this.очнаяформаобученияDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.студентыBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 44);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 44);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(951, 297);
-            this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.Size = new System.Drawing.Size(923, 297);
+            this.dataGridView1.TabIndex = 14;
+            // 
+            // кодстудентаDataGridViewTextBoxColumn
+            // 
+            this.кодстудентаDataGridViewTextBoxColumn.DataPropertyName = "Код_студента";
+            this.кодстудентаDataGridViewTextBoxColumn.HeaderText = "Код_студента";
+            this.кодстудентаDataGridViewTextBoxColumn.Name = "кодстудентаDataGridViewTextBoxColumn";
+            this.кодстудентаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // фИОDataGridViewTextBoxColumn
             // 
@@ -333,33 +358,25 @@
             this.курсDataGridViewTextBoxColumn.HeaderText = "Курс";
             this.курсDataGridViewTextBoxColumn.Name = "курсDataGridViewTextBoxColumn";
             // 
+            // кодспециальностиDataGridViewTextBoxColumn
+            // 
+            this.кодспециальностиDataGridViewTextBoxColumn.DataPropertyName = "Код_специальности";
+            this.кодспециальностиDataGridViewTextBoxColumn.HeaderText = "Код_специальности";
+            this.кодспециальностиDataGridViewTextBoxColumn.Name = "кодспециальностиDataGridViewTextBoxColumn";
+            // 
             // очнаяформаобученияDataGridViewCheckBoxColumn
             // 
             this.очнаяформаобученияDataGridViewCheckBoxColumn.DataPropertyName = "Очная_форма_обучения";
             this.очнаяформаобученияDataGridViewCheckBoxColumn.HeaderText = "Очная_форма_обучения";
             this.очнаяформаобученияDataGridViewCheckBoxColumn.Name = "очнаяформаобученияDataGridViewCheckBoxColumn";
             // 
-            // студентыTableAdapter
-            // 
-            this.студентыTableAdapter.ClearBeforeFill = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(12, 408);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Главная";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 450);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
@@ -401,10 +418,12 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private StudentsDataSet studentsDataSet;
         private System.Windows.Forms.BindingSource студентыBindingSource;
         private StudentsDataSetTableAdapters.СтудентыTableAdapter студентыTableAdapter;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодстудентаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn полDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn датарожденияDataGridViewTextBoxColumn;
@@ -416,8 +435,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn датапоступленияDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn группаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn курсDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодспециальностиDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn очнаяформаобученияDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Button button6;
     }
 }
 

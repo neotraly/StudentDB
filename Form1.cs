@@ -66,18 +66,16 @@ namespace StudendDB
                 case 7: Col = dataGridView1.Columns[7]; break;
                 case 8: Col = dataGridView1.Columns[8]; break;
                 case 10: Col = dataGridView1.Columns[10]; break;
-
-                    if(radioButton1.Checked)
-                    {
-                        dataGridView1.Sort(Col, ListSortDirection.Ascending);
-
-                    }
-                    else
-                    {
-                        dataGridView1.Sort(Col, ListSortDirection.Descending);
-                    }
             }
+            if (radioButton1.Checked)
+            {
+                dataGridView1.Sort(Col, ListSortDirection.Ascending);
 
+            }
+            else
+            {
+                dataGridView1.Sort(Col, ListSortDirection.Descending);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
